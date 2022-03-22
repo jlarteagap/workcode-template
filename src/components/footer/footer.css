@@ -1,0 +1,8 @@
+.footer{
+    color: white;
+    background: var(--wc__dark);
+}
+
+.copyright{
+    font-size: .75rem;
+}
