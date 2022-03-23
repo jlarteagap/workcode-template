@@ -1,11 +1,12 @@
 import React from 'react'
+import { Contact } from './components/contact/Contact'
 import { Layout } from './pages/layout/Layout'
 import './style.css'
 function App() {
   return (
     <Layout>
       <div className="App">
-        <p>Hola</p>
+        <Contact />
       </div>
     </Layout>
   )

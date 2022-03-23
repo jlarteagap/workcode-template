@@ -1,0 +1,14 @@
+.contact__icons{
+    border-radius: 5px;
+    width: 6rem;
+    height: 6rem;
+    background-color: var(--wc__orange);
+    color: white;
+    transition: all .4s
+}
+.contact__icons:hover{
+    background: transparent;
+    border: 1px solid var(--wc__orange);
+    color: var(--wc__orange);
+    transform: scale(1.025);
+}

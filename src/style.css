@@ -2,3 +2,31 @@
     --wc__dark: #10151b;
     --wc__orange: #c24131;
 }
+
+body{
+    font-size: 16px;
+    color: var(--wc__dark);
+}
+
+/* titles */
+.wc__titles{
+    position: relative;
+    border-left: 1px solid var(--wc__orange);
+    border-right: 1px solid var(--wc__orange);
+    padding: 0 1.5rem;
+    letter-spacing: .25rem;
+}
+.wc__titles::before, .wc__titles::after{
+    content: '';
+    height: 1px;
+    width: 2rem;
+    background-color: var(--wc__orange);
+    position: absolute;
+    top: 50%;
+}
+.wc__titles::before{
+    left: -2rem;
+}
+.wc__titles::after{
+    right: -2rem;
+}
