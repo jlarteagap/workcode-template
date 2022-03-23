@@ -1,6 +1,8 @@
 import React from 'react'
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from 'react-icons/fa'
 import './contact.css'
+
+import { Form } from './Form'
 export const Contact = () => {
   return (
     <div className="container py-5">
@@ -42,6 +44,8 @@ export const Contact = () => {
           <span>text 2</span>
         </div>
       </div>
+
+      <Form />
     </div>
   )
 }

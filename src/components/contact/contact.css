@@ -12,3 +12,36 @@
     color: var(--wc__orange);
     transform: scale(1.025);
 }
+
+/* Form */
+.wc__form{
+    position: relative;
+}
+.wc__form-input:focus, .wc__form-textarea:focus{
+    border-color: var(--wc__orange);
+    box-shadow: 0 0 0 0.25rem rgba(194, 65, 49, .5)
+}
+.wc__form-label{
+    pointer-events: none;
+    position: absolute;
+    padding-left: 2rem;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: text;
+}
+.wc__form-input:focus + .wc__form-label,
+.wc__form-input:not(:placeholder-shown) + .wc__form-label,
+.wc__form-textarea:not(:placeholder-shown) + .wc__form-label,
+.wc__form-textarea:focus + .wc__form-label {
+    background-color: #fff;
+    padding: 0 .5rem;
+    color: var(--wc__orange);
+    top: -15px;
+    transform: scale(.85) translateY(-30%) translateX(30px);
+}
+
+.wc__form-input, .wc__form-label{
+    transition: all .2s;
+    transition-timing-function: cubic-bezier(.25, .1, .25, 1);
+}
