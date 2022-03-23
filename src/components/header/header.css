@@ -1,0 +1,32 @@
+.wc__brand img{
+    object-fit: contain;
+    width: 200px;
+    height: auto;
+}
+
+.header a{
+    color: var(--wc__dark);
+    transition: all .4s;
+}
+.header a:hover, .header a:focus, .header a:active{
+    color: var(--wc__orange)
+}
+.header .active{
+    color: var(--wc__orange);
+}
+.navbar-nav li{
+    position: relative;
+    padding: 0 1rem;
+}
+.navbar-nav li:not(:last-child):after{
+    color: var(--wc__dark);
+    content: '/';
+    position: absolute;
+    top: 10%;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:2px;
+    height: 80%;
+}
