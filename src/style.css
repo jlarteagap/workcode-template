@@ -30,3 +30,17 @@ body{
 .wc__titles::after{
     right: -2rem;
 }
+.wc__accordion{
+    background-color: var(--wc__orange);
+    color: white;
+}
+.wc__accordion:not(.collapsed){
+    color: var(--wc__orange);
+    background: transparent;
+    box-shadow: inset 0 -1px 0 rgba(223, 89, 89, 0.13);
+}
+
+.wc__accordion:focus{
+    border-color: var(--wc__orange) !important;
+    box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%) !important;
+}

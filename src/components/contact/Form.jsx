@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Form = () => {
   return (
-    <div>
+    <div className="row">
       <div className="d-flex justify-content-center ">
         <h2 className="fw-light">DEJA TUS DATOS</h2>
       </div>
@@ -41,12 +41,12 @@ export const Form = () => {
             <textarea
               className="wc__form-textarea form-control w-100"
               placeholder=" "
-              rows="4"
+              rows="6"
             ></textarea>
             <label className="wc__form-label form-label">Your message</label>
           </div>
         </div>
-        <button className="wc__form-button btn btn-outline-primary mt-3">
+        <button className="wc__form-button btn btn-outline-secondary mt-3">
           SEND MESSAGE
         </button>
       </form>

@@ -7,7 +7,7 @@ export const Contact = () => {
   return (
     <div className="container py-5">
       <div className="contact__header d-flex justify-content-center flex-column align-items-center">
-        <h2 className="contact__header-title wc__titles fw-light">
+        <h2 className="contact__header-title wc__titles fw-lighter">
           CONTACTANOS
         </h2>
         <p className="fw-light">Puedes ponerte en contacto cuando desees</p>
