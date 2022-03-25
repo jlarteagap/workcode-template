@@ -7,7 +7,6 @@ import {
 } from 'react-icons/fa'
 
 export const Social = ({ company }) => {
-  console.log(company.facebook)
   return (
     <div className="footer__brand-social px-5 pt-5 pb-3 d-flex">
       <h4>Agregar Redes sociales</h4>
