@@ -16,7 +16,7 @@ export const Slide = () => {
       }
     })()
   }, [])
-  console.log(typeof slide)
+
   return (
     <div
       id="carouselExampleSlidesOnly"

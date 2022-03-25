@@ -1,3 +1,8 @@
+.wc__applications-services{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.5rem;
+}
 .wc__our-habilities-icons{
     background-color: #e5e5e5;
     border-radius: .5rem;
@@ -13,6 +18,9 @@
     background-color: rgba(0, 0, 0, .5);
     background-image: url('../../assets/construccion.webp');
     background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     color: white;
 }
 .wc__habilities-quote{
@@ -21,4 +29,28 @@
 .wc__our-habilities-brand{
     border-top: solid 5px var(--wc__orange);
     padding-top: .5rem;
+}
+.wc__our-habilities-data{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .wc__applications-services{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .wc__applications-services h4{
+        font-size: .7rem !important;
+    }
+    .wc__applications-services p{
+        font-size: .65rem !important;
+    }
+
+    .wc__our-habilities-data{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .wc__our-habilities-icons p{
+        font-size: .85rem !important;
+    }
 }

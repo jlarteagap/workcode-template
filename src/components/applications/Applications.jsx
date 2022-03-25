@@ -6,12 +6,12 @@ export const Aplications = () => {
   return (
     <div className="row">
       <div className="container my-5">
-        <div className="d-flex justify-content-center my-5">
-          <h2 className="wc__applications wc__titles fw-lighter">
+        <div className="wc__applications d-flex justify-content-center my-5">
+          <h2 className="wc__applications-titles wc__titles fw-lighter">
             Aplicaciones
           </h2>
         </div>
-        <div className="d-flex justify-content-evenly mb-5">
+        <div className="wc__applications-services my-5">
           <div className="text-center">
             <div className="wc__applications mb-3">
               <Fa500Px size={45} />
@@ -52,8 +52,6 @@ export const Aplications = () => {
               vez, pueden ser personalizados o customizados
             </p>
           </div>
-        </div>
-        <div className="d-flex justify-content-evenly mb-5">
           <div className="text-center">
             <div className="wc__applications mb-3">
               <Fa500Px size={45} />
@@ -99,26 +97,34 @@ export const Aplications = () => {
         <div className="wc__our-habilities">
           <div className="wc__our-habilities-title d-flex align-items-center flex-column">
             <h2 className="fw-lighter text-uppercase">nuestras habilidades</h2>
-            <span className="fw-lighter">
+            <span className="fw-lighter text-center">
               Contamos con experiencia y destreza en tecnologias
             </span>
           </div>
-          <div className="d-flex justify-content-evenly my-5">
+          <div className="wc__our-habilities-data py-5">
             <div className="wc__our-habilities-icons d-flex flex-column justify-content-center align-items-center">
               <FaDatabase size={36} />
-              <p className="text-uppercase p-0 m-0">bases de datos</p>
+              <p className="text-uppercase p-0 m-0 text-center mt-3">
+                bases de datos
+              </p>
             </div>
             <div className="wc__our-habilities-icons d-flex flex-column justify-content-center align-items-center">
               <FaDatabase size={36} />
-              <p className="text-uppercase p-0 m-0">bases de datos</p>
+              <p className="text-uppercase p-0 m-0 text-center mt-3">
+                bases de datos
+              </p>
             </div>
             <div className="wc__our-habilities-icons d-flex flex-column justify-content-center align-items-center">
               <FaDatabase size={36} />
-              <p className="text-uppercase p-0 m-0">bases de datos</p>
+              <p className="text-uppercase p-0 m-0 text-center mt-3">
+                bases de datos
+              </p>
             </div>
             <div className="wc__our-habilities-icons d-flex flex-column justify-content-center align-items-center">
               <FaDatabase size={36} />
-              <p className="text-uppercase p-0 m-0">bases de datos</p>
+              <p className="text-uppercase p-0 m-0 text-center mt-3">
+                bases de datos
+              </p>
             </div>
           </div>
         </div>
