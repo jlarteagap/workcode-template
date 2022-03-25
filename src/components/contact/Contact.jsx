@@ -1,23 +1,13 @@
 /* eslint-disable prettier/prettier */
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from 'react-icons/fa'
+import useData from '../../hooks/useData'
 import './contact.css'
-
 import { Form } from './Form'
-import { getData } from '../../api/api'
 
 export const Contact = () => {
-  const [empresa, setEmpresa] = useState('')
-  useEffect(() => {
-    (async () => {
-      try {
-        const res = await getData('empresa')
-        setEmpresa(res.records)
-      } catch (error) {
-        console.log(error)
-      }
-    })()
-  }, [])
+  const {empresa} = useData()
+
   return (
     <div className="container py-5">
       <div className="contact__header d-flex justify-content-center flex-column align-items-center">

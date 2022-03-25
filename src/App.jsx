@@ -6,15 +6,18 @@ import { Layout } from './pages/layout/Layout'
 import { Aplications } from './components/applications/Applications'
 import './style.css'
 import { Hero } from './components/hero/Hero'
+import { AppProvider } from './context/AppContext'
 function App() {
   return (
-    <Layout>
-      <Hero />
-      <Aplications />
-      <About />
-      <DatosCuriosos />
-      <Contact />
-    </Layout>
+    <AppProvider>
+      <Layout>
+        <Hero />
+        <Aplications />
+        <About />
+        <DatosCuriosos />
+        <Contact />
+      </Layout>
+    </AppProvider>
   )
 }
 

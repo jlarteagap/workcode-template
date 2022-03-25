@@ -1,23 +1,13 @@
 /* eslint-disable prettier/prettier */
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import './footer.css'
 import { HiChevronDoubleUp } from 'react-icons/hi'
 import workcorde from '../../assets/workcode-b.jpg'
 import { Social } from './Social'
-import { getData } from '../../api/api'
+import useData from '../../hooks/useData'
 
 export const Footer = () => {
-  const [empresa, setEmpresa] = useState('')
-  useEffect(() => {
-    (async () => {
-      try {
-        const res = await getData('empresa')
-        setEmpresa(res.records)
-      } catch (error) {
-        console.log(error)
-      }
-    })()
-  }, [])
+  const { empresa } = useData()
 
   const d = new Date()
   return (
