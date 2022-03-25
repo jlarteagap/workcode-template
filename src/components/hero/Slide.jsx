@@ -4,9 +4,9 @@ import React, { useState, useEffect } from 'react'
 import { getData } from '../../api/api'
 
 export const Slide = () => {
-  const [slide, setSlide] = useState('')
+  const [slide, setSlide] = useState([''])
 
-  useEffect(() => {
+  useEffect(async () => {
     (async () => {
       try {
         const res = await getData('portada')
@@ -16,7 +16,7 @@ export const Slide = () => {
       }
     })()
   }, [])
-
+  console.log(typeof slide)
   return (
     <div
       id="carouselExampleSlidesOnly"
@@ -27,7 +27,7 @@ export const Slide = () => {
         {slide.map((item, index) => {
             console.log(item)
             return(
-        <div className={`carousel-item ${index === 0 ? 'active' : ''} `}>
+        <div className={`carousel-item ${index === 0 ? 'active' : ''} `} key={index}>
           <img src={item.URL} className="d-block w-100" alt={item.ID_FOTO} />
         </div>)
         })}
