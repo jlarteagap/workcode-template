@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect } from 'react'
-
+import { API_HOST, A, E, UB } from '../utils/constant'
 export const AppContext = createContext({
   empresa: undefined
 })
@@ -8,7 +8,7 @@ export function AppProvider({ children }) {
   const [empresa, setEmpresa] = useState([])
 
   useEffect(async () => {
-    const url = `https://workcore.net/apiv2/web/empresa/?a=124&e=28&ub=http://workcore.net/`
+    const url = `${API_HOST}/empresa/?a=${A}&e=${E}&ub={UB}`
 
     const res = await fetch(url)
     const data = await res.json()

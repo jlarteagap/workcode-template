@@ -1,6 +1,7 @@
+import { API_HOST, A, E, UB } from '../utils/constant'
 export async function getData(section) {
   try {
-    const url = `https://workcore.net/apiv2/web/${section}/?a=124&e=28&ub=http://workcore.net/`
+    const url = `${API_HOST}/${section}/?a=${A}&e=${E}&ub=${UB}`
 
     const res = await fetch(url)
     const result = await res.json()
