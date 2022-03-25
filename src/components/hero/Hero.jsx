@@ -3,6 +3,7 @@ import heroImg from '../../assets/top.jpg'
 import { getData } from '../../api/api'
 
 import './hero.css'
+import { Slide } from './Slide'
 export const Hero = () => {
   const [empresa, setEmpresa] = useState('')
   useEffect(() => {
@@ -19,7 +20,7 @@ export const Hero = () => {
     <div className="row">
       <div className="container my-5">
         <div className="text-center">
-          <img src={heroImg} alt="" className="img-fluid" width="900px" />
+          <Slide />
           <h1 className="wc__hero-title text-uppercase fs-1 fw-bolder">
             Bienvenidos a {empresa.nombre}
           </h1>
