@@ -18,11 +18,15 @@ export const Hero = () => {
   return (
     <div className="row">
       <div className="container my-5">
-        <div className="text-center">
-          <Slide />
-          <h1 className="wc__hero-title text-uppercase fs-1 fw-bolder">
-            Bienvenidos a {empresa.nombre}
-          </h1>
+        <div className="row justify-content-center align-items-center">
+          <div className="col-12 col-lg-6">
+            <Slide />
+          </div>
+          <div className="col-12 col-lg-6 text-center">
+            <h1 className="wc__hero-title text-uppercase fs-1 fw-bolder">
+              Bienvenidos a {empresa.nombre}
+            </h1>
+          </div>
         </div>
       </div>
       <div className="wc__hero-quote py-5">
