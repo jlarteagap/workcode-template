@@ -3,7 +3,9 @@
     width: 200px;
     height: auto;
 }
-
+.wc__burger {
+    color: grey;
+}
 .header a{
     color: var(--wc__dark);
     transition: all .4s;
@@ -30,3 +32,9 @@
     width:2px;
     height: 80%;
 }
+@media only screen and (max-width: 600px){
+.wc__brand img{
+    object-fit: contain;
+    width: 150px;
+    height: auto;
+}}

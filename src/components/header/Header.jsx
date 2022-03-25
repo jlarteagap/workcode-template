@@ -1,14 +1,13 @@
 import React from 'react'
-import './header.css'
-
 import workcode from '../../assets/workcode-w.jpg'
+import './header.css'
 export const Header = () => {
   return (
-    <header className="header container">
-      <nav className="navbar navbar-expand-lg">
+    <header>
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <a className="wc__brand navbar-brand" href="#">
-            <img src={workcode} alt="WorkCode" srcSet="" />
+            <img src={workcode} alt="" />
           </a>
           <button
             className="navbar-toggler"
@@ -35,38 +34,6 @@ export const Header = () => {
                 <a className="nav-link" href="#">
                   Link
                 </a>
-              </li>
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Dropdown
-                </a>
-                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Action
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Another action
-                    </a>
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Something else here
-                    </a>
-                  </li>
-                </ul>
               </li>
             </ul>
           </div>

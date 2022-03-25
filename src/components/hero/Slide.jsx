@@ -25,7 +25,6 @@ export const Slide = () => {
     >
         <div className="carousel-inner">
         {slide.map((item, index) => {
-            console.log(item)
             return(
         <div className={`carousel-item ${index === 0 ? 'active' : ''} `} key={index}>
           <img src={item.URL} className="d-block w-100" alt={item.ID_FOTO} />
