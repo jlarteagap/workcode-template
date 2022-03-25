@@ -1,17 +1,22 @@
+/* eslint-disable prettier/prettier */
 import React, { useEffect, useState } from 'react'
 import './footer.css'
 import { HiChevronDoubleUp } from 'react-icons/hi'
 import workcorde from '../../assets/workcode-b.jpg'
 import { Social } from './Social'
+import { getData } from '../../api/api'
 
 export const Footer = () => {
   const [empresa, setEmpresa] = useState('')
-  useEffect(async () => {
-    const url =
-      'https://workcore.net/apiv2/web/empresa/?a=124&e=28&ub=http://workcore.net/'
-    const res = await fetch(url)
-    const result = await res.json()
-    setEmpresa(result.records)
+  useEffect(() => {
+    (async () => {
+      try {
+        const res = await getData('empresa')
+        setEmpresa(res.records)
+      } catch (error) {
+        console.log(error)
+      }
+    })()
   }, [])
 
   const d = new Date()
