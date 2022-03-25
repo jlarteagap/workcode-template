@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import heroImg from '../../assets/top.jpg'
 import { getData } from '../../api/api'
 
 import './hero.css'
