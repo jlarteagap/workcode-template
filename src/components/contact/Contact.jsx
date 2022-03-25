@@ -1,9 +1,23 @@
-import React from 'react'
+/* eslint-disable prettier/prettier */
+import React, { useEffect, useState } from 'react'
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from 'react-icons/fa'
 import './contact.css'
 
 import { Form } from './Form'
+import { getData } from '../../api/api'
+
 export const Contact = () => {
+  const [empresa, setEmpresa] = useState('')
+  useEffect(() => {
+    (async () => {
+      try {
+        const res = await getData('empresa')
+        setEmpresa(res.records)
+      } catch (error) {
+        console.log(error)
+      }
+    })()
+  }, [])
   return (
     <div className="container py-5">
       <div className="contact__header d-flex justify-content-center flex-column align-items-center">
@@ -13,35 +27,38 @@ export const Contact = () => {
         <p className="fw-light">Puedes ponerte en contacto cuando desees</p>
       </div>
       <div className="contact__address d-flex justify-content-around py-5">
-        <div className="contact__address-data d-flex align-items-center flex-column">
+        <div className="contact__address-data d-flex align-items-center flex-column text-center">
           <a
-            href="#"
+            href={`https://www.google.com/maps/@${empresa.latitud},${empresa.longitud},15z`}
+            target="_blank"
             className="contact__icons d-flex justify-content-center align-items-center mb-2"
+            rel="noreferrer"
           >
             <FaMapMarkerAlt size={32} />
           </a>
-          <span>text</span>
-          <span>text 2</span>
+          <span>{empresa.domicilio}</span>
         </div>
         <div className="contact__address-data d-flex align-items-center flex-column">
           <a
-            href=""
+            href={`mailto:${empresa.email}`}
+            target="_blank"
             className="contact__icons d-flex justify-content-center align-items-center mb-2"
+            rel="noreferrer"
           >
             <FaEnvelope size={32} />
           </a>
-          <span>text</span>
-          <span>text 2</span>
+          <span>{empresa.email}</span>
         </div>
         <div className="contact__address-data d-flex align-items-center flex-column">
           <a
-            href="#"
+            href={`tel: ${empresa.telefono}`}
+            target="_blank"
             className="contact__icons d-flex justify-content-center align-items-center mb-2"
+            rel="noreferrer"
           >
             <FaPhoneAlt size={32} />
           </a>
-          <span>text</span>
-          <span>text 2</span>
+          <span>{empresa.telefono}</span>
         </div>
       </div>
 
