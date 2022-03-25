@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './footer.css'
 import { HiChevronDoubleUp } from 'react-icons/hi'
-import { FaFacebookF, FaLinkedinIn, FaSkype, FaTwitter } from 'react-icons/fa'
 import workcorde from '../../assets/workcode-b.jpg'
+import { Social } from './Social'
 
 export const Footer = () => {
+  const [empresa, setEmpresa] = useState('')
+  useEffect(async () => {
+    const url =
+      'https://workcore.net/apiv2/web/empresa/?a=124&e=28&ub=http://workcore.net/'
+    const res = await fetch(url)
+    const result = await res.json()
+    setEmpresa(result.records)
+  }, [])
+
   const d = new Date()
   return (
     <footer className="footer row">
@@ -18,35 +27,10 @@ export const Footer = () => {
               <img src={workcorde} />
             </a>
           </div>
-          <div className="footer__brand-social px-5 pt-5 pb-3 d-flex">
-            <a
-              href="#"
-              className="footer__brand-icon d-flex justify-content-center align-items-center me-1"
-            >
-              <FaFacebookF />
-            </a>
-            <a
-              href="#"
-              className="footer__brand-icon d-flex justify-content-center align-items-center me-1"
-            >
-              <FaTwitter />
-            </a>
-            <a
-              href="#"
-              className="footer__brand-icon d-flex justify-content-center align-items-center me-1"
-            >
-              <FaLinkedinIn />
-            </a>
-            <a
-              href="#"
-              className="footer__brand-icon d-flex justify-content-center align-items-center me-1"
-            >
-              <FaSkype />
-            </a>
-          </div>
+          <Social company={empresa} />
         </div>
         <div className="copyright fw-lighter mt-5">
-          © {d.getFullYear()} WORKCODE
+          © {d.getFullYear()} {empresa.nombre}
         </div>
       </div>
     </footer>

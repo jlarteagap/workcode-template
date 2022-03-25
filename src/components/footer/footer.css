@@ -38,3 +38,13 @@
     background-color: var(--wc__orange);
     border-radius: 5px;
 }
+
+@media only screen and (max-width: 600px) {
+    .footer__brand{
+        flex-direction: column;
+        border-top: none;
+    }
+    .footer__brand-logo{
+        border-right: none
+    }
+  }
