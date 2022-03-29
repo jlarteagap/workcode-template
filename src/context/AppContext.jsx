@@ -1,14 +1,28 @@
 import React, { createContext, useState, useEffect } from 'react'
-import { API_HOST, A, E, UB } from '../utils/constant'
 export const AppContext = createContext({
-  empresa: undefined
+  empresa: undefined,
+  api: undefined
 })
 
 export function AppProvider({ children }) {
   const [empresa, setEmpresa] = useState([])
 
+  const [api, setApi] = useState({
+    url: 'https://workcore.net/apiv2/web/',
+    a: '124',
+    e: '28',
+    ub: 'http://workcore.net/'
+  })
+
+  const updateApi = e => {
+    setApi({
+      ...api,
+      [e.target.name]: e.target.value
+    })
+  }
+
   useEffect(async () => {
-    const url = `${API_HOST}/empresa/?a=${A}&e=${E}&ub=${UB}`
+    const url = `${api.url}/empresa/?a=${api.a}&e=${api.e}&ub=${api.ub}`
 
     const res = await fetch(url)
     const data = await res.json()
@@ -17,7 +31,9 @@ export function AppProvider({ children }) {
   }, [])
 
   const value = {
-    empresa
+    empresa,
+    api,
+    updateApi
   }
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>

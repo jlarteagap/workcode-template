@@ -1,9 +1,9 @@
 /* eslint-disable prettier/prettier */
 import React, { useState, useEffect } from 'react'
-
 import { getData } from '../../api/api'
 
 export const Slide = () => {
+  
   const [slide, setSlide] = useState([''])
 
   useEffect(async () => {

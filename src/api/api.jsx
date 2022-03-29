@@ -1,4 +1,5 @@
 import { API_HOST, A, E, UB } from '../utils/constant'
+
 export async function getData(section) {
   try {
     const url = `${API_HOST}/${section}/?a=${A}&e=${E}&ub=${UB}`
